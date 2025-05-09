@@ -1,0 +1,113 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+#section1 {
+    padding: 50px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header > #voltar{
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    color: #57534E;
+    font-size: 16px;
+    align-items: center;
+}
+
+header > #header > h1 {
+    font-size: 24px;
+}
+
+header > #header > span {
+    padding-top: 20px;
+    color: #57534E;
+    font-size: 16px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    gap: 30px;
+}
+
+form > h1 {
+    font-size: 16px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    
+}
+
+.form > input {
+    padding: 15px;
+    
+}
+
+.formInfo > input {
+    padding: 15px;
+    
+}
+
+.label {
+    color: #57534E;
+    font-size: 14px;
+
+}
+
+
+
+#section2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #FEE7D6;
+    height: 100vh;
+    width: 50vw;
+    padding: 80px;
+}
+
+#p1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Schoolbell", cursive;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#p2 > h1{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+#vermelho{
+    color: #E43A12;
+}
+
+#p2 > span{
+    color: #57534E;
+    font-size: 16px;
+}
+
+#section2 > img {
+    padding-top: 20px;
+    
+}

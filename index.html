@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schoolbell&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -33,34 +35,171 @@
 
                 <div class="form">
                     <label class="label" for="">Nome completo</label>
-                    <input type="text">
+                    <input class="input" type="text">
                 </div>
 
                 <div class="form">
                     <label class="label" for="">Data de nascimento</label>
-                    <input type="date">
+                    <input class="input" type="date">
                 </div>
 
                 <div class="form">
                     <label class="label" for="">Sexo</label>
-                    <input type="text">
+                    <input class="input" type="search" list="sexo">
+                    <datalist id="sexo" style="">
+                        <option value="Masculino">
+                        <option value="Feminino">
+                        <option value="Não Binario">
+                    </datalist>
                 </div>
-
                 <div class="form">
                     <label class="label" for="">Informações médicas</label>
-                    <input type="text" style="padding: 50px;">
+                    <textarea id="msg" name="msg" rows="8" cols="50"
+                        style="padding: 20px; box-sizing: border-box;border: 2px solid #D6D3D1;border-radius: 8px;"></textarea>
                 </div>
 
                 <div class="form">
                     <label class="label" for="">Certidão de nascimento</label>
-                    <input type="text" style="padding: 50px;">
+                    <label class="upload-area" for="fileUpload">
+                        <img src="assets/cloud-upload.svg" alt="">
+                        <div>Clique aqui para selecionar arquivos</div>
+                    </label>
+
+                    <input type="file" id="fileUpload" class="upload-input">
+                </div>
+            </form>
+
+            <form action="">
+
+                <h1>Endereço residencial</h1>
+
+                <div class="form">
+                    <label class="label" for="">CEP</label>
+                    <input class="input" type="number">
+                </div>
+
+                <div style="display: flex; flex-direction: row;">
+                    <div class="form" style="padding-right: 20px;">
+                        <label class="label" for="">Rua</label>
+                        <input class="input" type="text" style="width: 550px; background-color: #E7E5E4;">
+                    </div>
+                    <div class="form">
+                        <label class="label" for="">Número</label>
+                        <input class="input" type="number">
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: row;">
+                    <div class="form" style="padding-right: 20px;">
+                        <label class="label" for="">Cidade</label>
+                        <input class="input" type="text" style="width: 550px; background-color: #E7E5E4;">
+                    </div>
+                    <div class="form">
+                        <label class="label" for="">Estado</label>
+                        <input class="input" type="text" style="background-color: #E7E5E4;">
+                    </div>
+                </div>
+
+            </form>
+
+            <form action="">
+                <h1>Informações do responsável</h1>
+
+                <div class="form">
+                    <label class="label" for="">Nome do responsável</label>
+                    <input class="input" type="text">
+                    <label class="label" for="">Principal responsável legal e contato de emergência</label>
+                </div>
+
+                <div class="form">
+                    <label class="label" for="">Telefone</label>
+                    <input class="input" type="number">
+                </div>
+
+                <div class="form">
+                    <label class="label" for="">E-mail</label>
+                    <input class="input" type="email">
+                </div>
+            </form>
+
+            <form action="">
+                <h1>Opções de matrícula</h1>
+
+                <div class="form">
+                    <label class="label" for="">Selecionar o turno de estudo</label>
+
+                    <div style="display: flex; gap: 20px; width: 100%; justify-content: space-between;">
+                        <label class="option-card">
+                            <input type="radio" name="turno" value="manha">
+                            <span class="custom-radio"></span>
+                            <div class="icon"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text">Manhã</div>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="turno" value="tarde">
+                            <span class="custom-radio"></span>
+                            <div class="icon"><img src="assets/sun-02.svg" alt=""></div>
+                            <div class="label-text">Tarde</div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <label class="label" for="">Em qual esporte você gostaria de inscrever seu filho?</label>
+
+                    <div style="display: flex; gap: 20px; width: 100%;">
+                        <label class="option-card2">
+                            <input type="radio" name="" value="">
+                            <span class="custom-radio"2></span>
+                            <div class="icon2"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text2">Futebol</div>
+                        </label>
+
+                        <label class="option-card2">
+                            <input type="radio" name="" value="">
+                            <span class="custom-radio"2></span>
+                            <div class="icon2"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text2">Basquete</div>
+                        </label>
+
+                        <label class="option-card2">
+                            <input type="radio" name="" value="">
+                            <span class="custom-radio"2></span>
+                            <div class="icon2"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text2">Natação</div>
+                        </label>
+
+                        <label class="option-card2">
+                            <input type="radio" name="" value="">
+                            <span class="custom-radio"2></span>
+                            <div class="icon2"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text2">Yoga</div>
+                        </label>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; width: 100%;">
+                        <label class="option-card2">
+                            <input type="radio" name="" value="">
+                            <span class="custom-radio"2></span>
+                            <div class="icon2"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text2">Volley</div>
+                        </label>
+
+                        <label class="option-card2">
+                            <input type="radio" name="" value="">
+                            <span class="custom-radio"2></span>
+                            <div class="icon2"><img src="assets/sun-cloud-02.svg" alt=""></div>
+                            <div class="label-text2">Volley</div>
+                        </label>
+                    </div>
                 </div>
             </form>
         </section>
 
         <section id="section2">
             <div id="p1">
-                <img src="assets/Frame 48095957.svg" alt=""> 
+                <img src="assets/Frame 48095957.svg" alt="">
                 </svg>
 
                 <span>Estrelas do Amanhã</span>
@@ -68,7 +207,8 @@
 
             <div id="p2">
                 <h1>Porque cada momento de <span id="vermelho">aprendizado</span> conta</h1>
-                <span>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</span>
+                <span>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e
+                    estimulante.</span>
             </div>
 
             <img src="./assets/Illustration (1).svg" alt="">

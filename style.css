@@ -1,44 +1,56 @@
+/* Reset e estrutura base */
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Layout principal */
 main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: "Poppins", sans-serif;
 }
 
+
+
+
+/* Seção 1 */
 #section1 {
     padding: 50px;
 }
 
+/* Header */
 header {
     display: flex;
     flex-direction: column;
 }
 
-header>#voltar {
-    padding-bottom: 20px;
+#voltar {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
     color: #57534E;
     font-size: 16px;
-    align-items: center;
 }
 
-header>#header>h1 {
+#header h1 {
     font-size: 24px;
     padding-bottom: 10px;
 }
 
-header>#header>span {
+#header span {
     padding-top: 20px;
     color: #57534E;
     font-size: 16px;
 }
 
+/* Formulário */
 form {
     display: flex;
     flex-direction: column;
@@ -46,101 +58,95 @@ form {
     gap: 30px;
 }
 
-form>h1 {
+form h1 {
     font-size: 20px;
     padding-top: 20px;
 }
 
-.input {
-    box-sizing: border-box;
-    border: 2px solid #D6D3D1;
-    border-radius: 8px;
-
-}
-
-.input:hover {
-    box-sizing: border-box;
-    border: 2px solid #f26b2f;
-    border-radius: 8px;
-    box-shadow: 0 0 0 5px #fdeee6;
-    outline: none;
-}
-
-.input2 {
-    box-sizing: border-box;
-    border: 2px solid #D6D3D1;
-    border-radius: 8px;
-    background-color: #E7E5E4;
-}
-
-.input2:hover {
-    box-sizing: border-box;
-    border: 2px solid #f26b2f;
-    border-radius: 8px;
-    box-shadow: 0 0 0 5px #fdeee6;
-    outline: none;
-}
-
-.input2:focus {
-    box-sizing: border-box;
-    border: 2px solid #D6D3D1;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.form {
+.form,
+.formInfo {
     display: flex;
     flex-direction: column;
     gap: 7px;
-
 }
 
-.form>input {
+.form input,
+.formInfo input {
     padding: 15px;
-
-}
-
-.formInfo>input {
-    padding: 15px;
-
 }
 
 .label {
     color: #57534E;
     font-size: 14px;
-
 }
 
 #email:invalid {
     border-color: red;
 }
 
+/* Inputs */
+.input,
+.input2,
+textarea {
+    border: 2px solid #D6D3D1;
+    border-radius: 8px;
+}
 
-.option-card {
+.input:hover,
+.input2:hover,
+textarea:hover {
+    border-color: #f26b2f;
+    box-shadow: 0 0 0 5px #fdeee6;
+    outline: none;
+}
+
+.input2 {
+    background-color: #E7E5E4;
+}
+
+.input2:focus {
+    border-color: #f26b2f;
+    background-color: white;
+}
+
+textarea {
+    padding: 20px;
+}
+
+/* Cards de opções */
+.option-card,
+.option-card2 {
     display: inline-block;
+    text-align: center;
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 30px 70px;
-    text-align: center;
-    width: 120px;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
 }
 
-.option-card:hover {
+.option-card2 {
+    width: 200px;
+}
+
+.option-card {
+    width: 300px;
+}
+
+.option-card:hover,
+.option-card2:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid;
     border-color: #F3541C;
 }
 
-.option-card::selection {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid;
-    border-color: #F3541C;
+.option-card::selection,
+.option-card2::selection {
+    border: 2px solid #F3541C;
 }
 
-.option-card input[type="radio"] {
+.option-card input[type="radio"],
+.option-card2 input[type="radio"] {
     display: none;
 }
 
@@ -155,95 +161,32 @@ form>h1 {
     background: white;
 }
 
-.option-card input[type="radio"]:checked+.custom-radio {
-    background-image: url(assets/Vector.svg);
+input[type="radio"]:checked+.custom-radio {
+    background-image: url('assets/Vector.svg');
     background-size: cover;
 }
 
-.icon {
-    font-size: 32px;
-    color: #f26b2f;
-    ;
-    margin-top: 10px;
-}
-
-.label-text {
-    margin-top: 8px;
-    font-size: 16px;
-    color: #333;
-}
-
-
-
-.option-card2 {
-    display: inline-block;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 30px 70px;
-    text-align: center;
-    width: 60px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    position: relative;
-}
-
-.option-card2:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid;
-    border-color: #F3541C;
-}
-
-.option-card2::selection {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid;
-    border-color: #F3541C;
-}
-
-.option-card2 input[type="radio"] {
-    display: none;
-}
-
-.option-card2 input[type="radio"]:checked+.custom-radio {
-    background-image: url(assets/Vector.svg);
-    background-size: cover;
-}
-
+.icon,
 .icon2 {
     font-size: 32px;
     color: #f26b2f;
     margin-top: 10px;
 }
 
+.label-text,
 .label-text2 {
     margin-top: 8px;
     font-size: 16px;
     color: #333;
 }
 
-textarea {
-    padding: 20px;
-    box-sizing: border-box;
-    border: 2px solid #D6D3D1;
-    border-radius: 8px;
-}
-
-textarea:hover {
-    box-sizing: border-box;
-    border: 2px solid #f26b2f;
-    border-radius: 8px;
-    box-shadow: 0 0 0 5px #fdeee6;
-    outline: none;
-}
-
-
+/* Upload de arquivo */
 .upload-wrapper {
-    font-family: sans-serif;
     max-width: 400px;
     margin: 20px;
 }
 
 .upload-label {
-    display: block;
     margin-bottom: 8px;
     font-size: 14px;
     color: #333;
@@ -255,15 +198,12 @@ textarea:hover {
     text-align: center;
     padding: 40px 20px;
     cursor: pointer;
-    transition: border-color 0.3s ease;
     color: #aaa;
+    transition: border-color 0.3s ease;
 }
 
 .upload-area:hover {
-    box-sizing: border-box;
     border: 2px solid #f26b2f;
-    border-radius: 8px;
-    outline: none;
     background-color: #FEE7D6;
 }
 
@@ -278,19 +218,18 @@ textarea:hover {
     display: none;
 }
 
-
+/* Seção 2 */
 #section2 {
     display: flex;
     flex-direction: column;
     background-color: #FEE7D6;
-    height: 293vh;
+    height: 310vh;
     width: 50vw;
     padding: 80px;
 }
 
 #p1 {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 10px;
     font-family: "Schoolbell", cursive;
@@ -298,25 +237,25 @@ textarea:hover {
     padding-bottom: 10px;
 }
 
-#p2>h1 {
+#p2 h1 {
     font-size: 40px;
     padding-bottom: 10px;
 }
 
-.vermelho {
-    color: #E43A12;
-}
-
-#p2>span {
+#p2  {
     color: #57534E;
     font-size: 16px;
 }
 
-#section2>img {
-    padding-top: 20px;
-
+.vermelho {
+    color: red;
 }
 
+#section2>img {
+    padding-top: 20px;
+}
+
+/* Termo de aceite */
 #termo {
     width: 100%;
     padding-top: 50px;
@@ -325,7 +264,7 @@ textarea:hover {
     gap: 20px;
 }
 
-#termo-label>input {
+#termo-label input {
     width: 20px;
     height: 20px;
     border: 2px solid #ddd;
@@ -334,55 +273,65 @@ textarea:hover {
 }
 
 #termo-label input[type="checkbox"] {
-  display: none;
+    display: none;
 }
 
 .custom-check {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  display: inline-block;
-  background-color: white;
-  cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: white;
+    cursor: pointer;
 }
 
-#termo input[type="checkbox"]:checked + .custom-check {
-  background-image: url('assets/Vector.svg');
-  background-size: cover;
-  background-position: center;
+.custom-check:hover {
+    box-sizing: border-box;
+    border: 2px solid #f26b2f;
+    cursor: pointer;
+    outline: none;
 }
 
+#termo input[type="checkbox"]:checked+.custom-check {
+    background-image: url('assets/Vector.svg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #E43A12;
+}
+
+/* Botões */
 #buttons {
     display: flex;
-    flex-direction: row;
     justify-content: end;
     gap: 20px;
     padding-top: 50px;
 }
 
-#buttons>button {
-    padding: 15px;
+#buttons button {
     width: 200px;
+    padding: 15px;
     border: 2px solid #E43A12;
     border-radius: 8px;
     font-size: 16px;
+    cursor: pointer;
 }
 
-#buttons>button:hover {
-    box-sizing: border-box;
-    border: 2px solid #f26b2f;
-    border-radius: 8px;
-    box-shadow: 0 0 0 5px #fdeee6;
-    outline: none;
-}
-
-#buttons>#b1 {
+#b1 {
     background-color: white;
     color: #E43A12;
 }
 
-#buttons>#b2 {
+#b2 {
     background-color: #E43A12;
     color: white;
+}
+
+#b2:hover {
+    background-color: #f26b2f;
+}
+
+#buttons button:hover {
+    border-color: #f26b2f;
+    box-shadow: 0 0 0 5px #fdeee6;
 }

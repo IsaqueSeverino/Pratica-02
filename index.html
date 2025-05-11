@@ -101,7 +101,7 @@
 
             </form>
 
-            <form action="">
+            <form id="form-info-responsavel" action="">
                 <h1>Informações do responsável</h1>
 
                 <div class="form">
@@ -116,8 +116,9 @@
                 </div>
 
                 <div class="form">
-                    <label class="label" for="">E-mail</label>
-                    <input id="email" class="input" type="email" required>
+                    <label class="label" for="email">E-mail</label>
+                    <input id="email" class="input" type="email" name="email" required>
+                    
                 </div>
             </form>
 
@@ -206,7 +207,7 @@
 
             <div id="buttons">
                 <button type="submit" id="b1">Salvar respostas</button>
-                <button type="submitz" id="b2">Fazer matrícula</button>
+                <button type="submit" id="b2"  form="form-info-responsavel">Fazer matrícula</button>
 
             </div>
         </section>

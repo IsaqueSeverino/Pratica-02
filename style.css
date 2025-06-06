@@ -335,3 +335,109 @@ input[type="radio"]:checked+.custom-radio {
     border-color: #f26b2f;
     box-shadow: 0 0 0 5px #fdeee6;
 }
+
+/* Responsivo para telas menores que 1024px */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    #section1,
+    #section2 {
+        width: 100vw;
+        padding: 40px;
+    }
+
+    #section2 {
+        height: auto;
+    }
+
+    .option-card, .option-card2 {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    #buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #buttons button {
+        width: 100%;
+    }
+}
+
+/* Responsivo para tablets (768px) */
+@media (max-width: 768px) {
+    form {
+        gap: 20px;
+    }
+
+    .upload-wrapper {
+        max-width: 100%;
+    }
+
+    .option-card, .option-card2 {
+        padding: 20px 30px;
+    }
+
+    #section2 {
+        padding: 40px 20px;
+    }
+
+    #p2 h1 {
+        font-size: 28px;
+    }
+
+    #p2 {
+        font-size: 14px;
+    }
+}
+
+/* Responsivo para celulares (480px) */
+@media (max-width: 480px) {
+    #section1,
+    #section2 {
+        padding: 30px 20px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #header h1 {
+        font-size: 20px;
+    }
+
+    #header span {
+        font-size: 14px;
+    }
+
+    #p2 h1 {
+        font-size: 24px;
+    }
+
+    .form input,
+    .formInfo input,
+    textarea {
+        padding: 12px;
+    }
+
+    .option-card,
+    .option-card2 {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .label-text,
+    .label-text2 {
+        font-size: 14px;
+    }
+
+    #buttons button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
